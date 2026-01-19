@@ -1,0 +1,79 @@
+/* src/index.css */
+
+/* 1. Carga de Fuentes desde carpeta public */
+@font-face {
+  font-family: 'Muller';
+  /* Ruta absoluta desde la raíz pública */
+  src: url('/fonts/Muller-ExtraBold.ttf') format('truetype'); 
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('/fonts/Muller-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Variables de Color (Según Manual NUBAC) */
+:root {
+  /* Primarios */
+  --nubac-gris: #575756;    /* Black 80% */
+  --nubac-verde: #93d500;   /* Pantone 375C */
+  --nubac-naranja: #ffa51b; /* Pantone 1235C */
+  
+  /* Secundarios */
+  --nubac-verde-sec: #2c9942;
+  --nubac-amarillo: #ffd100;
+  
+  --blanco: #ffffff;
+  --fondo-claro: #f9f9f9;
+}
+
+/* 3. Reset básico */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muller', sans-serif;
+  font-weight: 700;
+  color: var(--nubac-gris);
+  background-color: var(--blanco);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Títulos con mayor peso */
+h1, h2, h3 {
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+p {
+  font-weight: 700;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Estilos de botones y secciones globales */
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: var(--nubac-naranja);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: transform 0.2s, background-color 0.2s;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--nubac-verde);
+  transform: translateY(-3px);
+}
